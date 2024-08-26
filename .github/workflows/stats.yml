@@ -18,6 +18,7 @@ jobs:
       - name: setup java
         uses: actions/setup-java@v4
         with:
+          distribution: 'temurin'  # Puedes elegir la distribución que prefieras
           java-version: '17.0.10'
           
       - name: compilar archivo java
