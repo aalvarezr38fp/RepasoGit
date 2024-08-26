@@ -22,7 +22,7 @@ jobs:
           java-version: '17.0.10'
           
       - name: compilar archivo java
-        run: javac hola.java
+        run: javac  HolaMundo.java
 
       - name: ejecutar archivo java
         run: java hola
