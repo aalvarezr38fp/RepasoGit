@@ -25,7 +25,7 @@ jobs:
         run: javac  HolaMundo.java
 
       - name: ejecutar archivo java
-        run: java hola
+        run: java  HolaMundo
 
       - name: commit and push
         uses: stefanzweifel/git-auto-commit-action@v5
