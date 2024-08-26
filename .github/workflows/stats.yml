@@ -1,0 +1,38 @@
+name: stats
+
+on: 
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+
+    steps:
+      - name: checkout repo
+      - uses: actions/checkout@v4
+      
+      - name: setup java
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17.0.10'
+          
+      - name: corriendo script
+      - run: ./java README.md
+
+      - name: commit and push
+      - uses: stefanzweifel/git-auto-commit-action@v5
+      - with: 
+          commit_messaage: md abierto
+          commit_user_name: ajar <action>
+          commit_user_email: ajarfp@gmail.com
+          
+      
+      
+
+  
+  
